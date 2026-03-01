@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validación de Password</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <h1>Ingresa el password</h1>
+
+<div class="contenedor-pass">
+  <div class="contenedor-sel">
+    <select id="d1">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </select>
+
+    <select id="d2">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </select>
+
+    <select id="d3">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </select>
+  </div>
+
+
+  <button id="ingresar">Ingresar</button>
+
+  <p id="resultado"></p>
+</div>
+
+
+  <div>
+        <footer style="margin-top: 40px;">
+            <a href="index.html">Volver a la página principal</a>
+        </footer>
+
+  </div>
+
+
+  <script>
+    const boton = document.querySelector('#ingresar');
+    const resultado = document.querySelector('#resultado');
+
+    boton.addEventListener('click', () => {
+      const d1 = document.querySelector('#d1').value;
+      const d2 = document.querySelector('#d2').value;
+      const d3 = document.querySelector('#d3').value;
+
+      const password = d1 + d2 + d3;
+
+      if (password === "911") {
+        resultado.textContent = "password 1 correcto";
+      } else if (password === "714") {
+        resultado.textContent = "password 2 correcto";
+      } else {
+        resultado.textContent = "password incorrecto";
+      }
+    });
+  </script>
+
+</body>
+</html>

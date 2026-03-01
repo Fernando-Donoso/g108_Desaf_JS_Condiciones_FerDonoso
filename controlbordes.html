@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordes</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <h1>Control de Bordes</h1>
+    
+    <Div id="container">
+
+        <img width="200" style="border: none;" src="assets/img/pen_ash-snow-10134653_1280.jpg" alt="" id="imgBordes"
+            onclick="
+                let imagen = document.querySelector('#imgBordes')
+                if(imagen.style.border == 'none'){
+                    imagen.style.border = '2px solid red'
+                }else{
+                    imagen.style.border = 'none'
+                    imagen.style.borderRadius = '0%'
+                }
+            "
+        >
+    </Div>
+
+    <div>
+            <footer style="margin-top: 40px;">
+                <a href="index.html">Volver a la página principal</a>
+            </footer>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido de Stickers</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <h1>Selecciona tus stickers</h1>
+
+  <div class="contenedor">
+    <div class="item">
+      <img src="assets/img/kaleddis-halloween-8279811_1920.jpg" alt="Sticker 1">
+      <input type="number" id="s1" min="0" value="0">
+    </div>
+
+    <div class="item">
+      <img src="assets/img/kaleddis-halloween-8279814_1280.jpg" alt="Sticker 2">
+      <input type="number" id="s2" min="0" value="0">
+    </div>
+
+    <div class="item">
+      <img src="assets/img/stocksnap-gold-2585714_1280.jpg" alt="Sticker 3">
+      <input type="number" id="s3" min="0" value="0">
+    </div>
+  </div>
+
+  <div class="resultado">
+    <button id="verificar">Verificar</button>
+
+    <p id="resultado"></p>
+  </div>
+
+   <div>
+            <footer style="margin-top: 40px;">
+                <a href="index.html">Volver a la página principal</a>
+            </footer>
+
+   </div>
+
+  <script>
+    const boton = document.querySelector('#verificar');
+    const resultado = document.querySelector('#resultado');
+
+    boton.addEventListener('click', () => {
+      const n1 = Number(document.querySelector('#s1').value);
+      const n2 = Number(document.querySelector('#s2').value);
+      const n3 = Number(document.querySelector('#s3').value);
+
+      const total = n1 + n2 + n3;
+
+      if (total <= 10) {
+        resultado.textContent = `Llevas ${total} stickers`;
+      } else {
+        resultado.textContent = "Llevas demasiados stickers";
+      }
+    });
+  </script>
+
+
+
+</body>
+</html>
